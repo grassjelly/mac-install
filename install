@@ -1,7 +1,14 @@
 #!/bin/bash
 set -e
 
+# INstall Brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# Add Homebrew to PATH for the rest of this script
+if [[ "$(uname -m)" == "arm64" ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"  # Apple Silicon
+else
+    eval "$(/usr/local/bin/brew shellenv)"      # Intel Mac
+fi
 
 brew install curl
 brew install glow
