@@ -14,14 +14,26 @@ brew install curl
 brew install glow
 brew install tree
 
-brew install --cask visual-studio-code
-brew install --cask ghostty
 brew install --cask firefox
 brew install --cask claude-code
 brew install --cask tailscale-app
 brew install --cask spotify
 brew install --cask claude-code
 brew install gemini-cli
+
+# Create/edit Ghostty config
+brew install --cask ghostty
+mkdir -p ~/.config/ghostty
+echo 'theme = Dracula' >> ~/.config/ghostty/config
+
+brew install --cask visual-studio-code
+code --install-extension dracula-theme.theme-dracula
+mkdir -p "$HOME/Library/Application Support/Code/User"
+cat >> "$HOME/Library/Application Support/Code/User/settings.json" << 'EOF'
+{
+  "workbench.colorTheme": "Dracula"
+}
+EOF
 
 # Install UV
 curl -LsSf https://astral.sh/uv/install.sh | less
