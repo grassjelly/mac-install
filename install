@@ -14,7 +14,7 @@ brew install curl
 brew install glow
 brew install tree
 
-brew install --cask visual-studio
+brew install --cask visual-studio-code
 brew install --cask ghostty
 brew install --cask firefox
 brew install --cask claude-code
