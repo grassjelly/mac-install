@@ -17,6 +17,7 @@ brew install tree
 brew install --cask firefox
 brew install --cask claude-code
 brew install --cask tailscale-app
+brew install --cask keyboardcleantool
 brew install --cask spotify
 brew install --cask claude-code
 brew install gemini-cli
@@ -25,6 +26,7 @@ brew install gemini-cli
 brew install --cask ghostty
 mkdir -p ~/.config/ghostty
 echo 'theme = Dracula' >> ~/.config/ghostty/config
+echo 'term = xterm-256color' >> ~/.config/ghostty/config
 
 brew install --cask visual-studio-code
 code --install-extension dracula-theme.theme-dracula
