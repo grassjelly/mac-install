@@ -13,7 +13,15 @@ fi
 brew install curl
 brew install glow
 brew install tree
+
+## Install fresh IDE
 brew install fresh-editor
+mkdir -p ~/.config/fresh
+cat > ~/.config/fresh/config.json << 'EOF'
+{
+  "theme": "builtin://terminal"
+}
+EOF
 
 brew install --cask firefox
 brew install --cask claude
