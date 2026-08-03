@@ -13,6 +13,7 @@ fi
 brew install curl
 brew install glow
 brew install tree
+brew install fresh-editor
 
 brew install --cask firefox
 brew install --cask claude
